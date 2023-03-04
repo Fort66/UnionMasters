@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>{{ title }}</h1>
+    <p>хер знает, какой-то текст</p>
+    <button class="btn btn-warning">На страницу о нас</button>
+
+    {% for val in values %}
+        <p>{{ val }}</p>
+    {% endfor %}
+</div>
+
+<!--{% include 'main/includes/ins_html.html' %}-->
+
+{% endblock %}

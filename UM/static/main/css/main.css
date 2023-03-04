@@ -1,0 +1,70 @@
+body {
+    background: silver;
+}
+
+header{
+    float: left;
+    background: silver;
+    padding: 1%;
+    width: 100%;
+    padding: 1%;
+    height: 10vh;
+    color: #fff;
+    border-bottom: 5px solid #4d4d4d;
+}
+
+/* header img {
+    width: 30px;
+    float: left;
+} */
+
+/* header .logo {
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+} */
+
+/* header h3 {
+    margin-top: 10px;
+    font-size: 25px;
+} */
+
+header ul {
+    list-style: none;
+     
+}
+
+header ul li {
+    float: right;
+    color: #fff;
+    display: inline;
+    margin-left: 20px;
+    transition: transform .6s ease;
+    
+}
+
+header ul li:hover, header ul a:hover {
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+main .features {
+    float: left;
+    /* color: #fff; */
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+
+main .features h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+main .features p {
+    max-width: 400px;
+    margin: 20px auto;
+}

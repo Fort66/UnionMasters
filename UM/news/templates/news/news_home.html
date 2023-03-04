@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Наши новости{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Наши новости</h1>
+    {% if news%}
+        {% for val in news %}
+            <div class = 'alert alert-warning'>
+            <h3>{{ val.NewsTitle }}</h3>
+            <p>{{ val.NewsBody }}</p>
+            <p>Дата публикации: {{ val.NewsDatePosted }}</p>
+            <a href = ""><li><button class = "btn btn-info"><i class = "fas fa-plus-circle"></i>Добавить новость</button></li></a>
+            <a href = ""><li><button class = "btn btn-warning"><i class = "fas fa-plus-circle"></i>Удалить новость</button></li></a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Нет новостей</p>
+    {% endif %}
+</div>
+
+<!--{% include 'main/includes/ins_html.html' %}-->
+
+{% endblock %}
