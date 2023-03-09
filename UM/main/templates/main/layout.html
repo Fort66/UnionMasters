@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" type="text/css">
+
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com" type="text/css">
+
     {% comment %} <script src="https://kit.fontawesome.com/e4cb3ca4ce.js" crossorigin="anonymous"></script> {% endcomment %}
     {% comment %} e4cb3ca4ce {% endcomment %}
     
@@ -22,7 +26,7 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="{% url 'index' %}">
         <img src="{% static 'main/img/logo.png' %}" alt="" width="30" height="30" class="d-inline-block align-text-top">
         Союз Честных Мастеров
       </a>
