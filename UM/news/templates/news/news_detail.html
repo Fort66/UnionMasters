@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ news_detail.NewsTitle }}{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>{{ news_detail.NewsTitle }}</h1>
+    <p>{{ news_detail.NewsDatePosted }}</p>
+    <p>{{ news_detail.NewsAnonce }}</p>
+    <p>{{ news_detail.NewsBody }}</p>
+    <p>{{ news_detail.NewsPhoto }}</p>
+    <a href = "{ url 'news_delete' news_detail.id}" class = "btn btn-danger">Удалить</a>
+    <a href = "{ url 'news_update' news_detail.id}" class = "btn btn-info">Редактировать</a>
+    
+</div>
+
+<!--{% include 'main/includes/ins_html.html' %}-->
+
+{% endblock %}

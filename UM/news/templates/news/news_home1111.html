@@ -1,0 +1,38 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Наши новости{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Наши новости</h1>
+    {% if news%}
+        {% for val in news %}
+            <div class = 'alert alert-warning'>
+            <h3>{{ val.NewsTitle }}</h3>
+            <p>{{ val.NewsAnonce }}</p>
+            <div class="media">
+                <div class="media-photo">
+                    {% if val.NewsPhoto %}
+                        <img src="{{ val.NewsPhoto.url }}" class = "mr-3" width="350" alt="Фото">
+                    {% else %}
+                        <h6>Новость без фото</h6>
+                    {% endif %}
+
+                </div>
+            </div>
+            <!-- <p>{{ val.NewsBody }}</p> -->
+            <!-- <p>{{ val.NewsPhoto }}</p> -->
+            <p>Дата публикации: {{ val.NewsDatePosted }}</p>
+            <a href = "{% url 'news_detail' val.id %}" class = 'btn btn-warning'>Читать полностью</a>
+            <!-- <a href = "{% url 'addnews' %}"><li><button class = "btn btn-info"><i class = "fas fa-plus-circle"></i>Добавить новость</button></li></a>
+            <a href = ""><li><button class = "btn btn-warning"><i class = "fas fa-plus-circle"></i>Удалить новость</button></li></a> -->
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Нет новостей</p>
+    {% endif %}
+</div>
+
+<!--{% include 'includes/ins_html.html' %}-->
+
+{% endblock %}
